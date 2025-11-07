@@ -42,3 +42,6 @@ fun TampilData(
                 colors = TopAppBarDefaults.mediumTopAppBarColors(containerColor = colorResource(id = R.color.purple_700))
             )
         })
+    {
+            isiRuang->
+        Column(modifier = Modifier.padding(paddingValues = isiRuang),
