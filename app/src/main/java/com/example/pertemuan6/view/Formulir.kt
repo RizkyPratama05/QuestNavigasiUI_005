@@ -36,3 +36,7 @@ fun FormIsian(
                 colors = TopAppBarDefaults.mediumTopAppBarColors(containerColor = colorResource(R.color.purple_700))
             )
         }
+    ) { isiRuang ->
+        Column(modifier = Modifier.padding(paddingValues = isiRuang),
+            verticalArrangement = Arrangement.Top,
+            horizontalAlignment = Alignment.CenterHorizontally) {
