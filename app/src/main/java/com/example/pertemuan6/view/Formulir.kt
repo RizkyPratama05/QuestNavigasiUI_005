@@ -52,3 +52,14 @@ fun FormIsian(
             HorizontalDivider(modifier = Modifier
                 .padding(all = 20.dp)
                 .width(width = 250.dp), thickness = Thickness, color = Color.Red)
+            Row {
+                jenisJK.forEach {
+                        item->
+                    Row(verticalAlignment = Alignment.CenterVertically){
+
+                    }
+                }
+            }
+        }
+    }
+}
