@@ -3,8 +3,12 @@ package com.example.pertemuan6.view
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
+import androidx.compose.material3.Button
 import androidx.compose.material3.DividerDefaults.Thickness
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
@@ -27,7 +31,7 @@ import com.example.pertemuan6.R
 @Composable
 fun FormIsian(
     jenisJK: List<String> = listOf("Laki-laki", "Perempuan"),
-    onSubmitBtnClick : () -> Unit
+    OnSubmitBtnClick : () -> Unit
 ){
     Scaffold(
         modifier = Modifier,
@@ -68,6 +72,22 @@ fun FormIsian(
             HorizontalDivider(modifier = Modifier
                 .padding(all = 20.dp)
                 .width(width = 250.dp), thickness = Thickness, color = Color.Red)
+            OutlinedTextField(
+                value = "",
+                singleLine = true,
+                modifier = Modifier
+                    .width(width = 250.dp),
+                label = {Text(text = "Alamat")},
+                onValueChange = {},
+            )
+            Spacer(modifier = Modifier.height(height = 30.dp))
+            Button(
+                modifier = Modifier.fillMaxWidth(1f)
+                    .padding(all = 25.dp),
+                onClick = OnSubmitBtnClick
+            ) {
+                Text(text = stringResource(id = R.string.submit))
+            }
         }
     }
 }
